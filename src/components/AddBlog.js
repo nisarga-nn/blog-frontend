@@ -12,7 +12,7 @@ const AddBlog = () => {
 
   const handleAddBlog = async () => {
     try {
-      const response = await fetch("http://localhost:4000/blog/add", {
+      const response = await fetch("https://blog-backend-flame.vercel.app/blog/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

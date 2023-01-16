@@ -7,7 +7,7 @@ const Signup = () => {
 
   const handleSignUp = async () => {
     try {
-      const response = await fetch("http://localhost:4000/user/signup", {
+      const response = await fetch("https://https://blog-backend-flame.vercel.app/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

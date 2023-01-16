@@ -11,7 +11,7 @@ const EditBlog = () => {
     (async () => {
       try {
         const response = await fetch(
-          `http://localhost:4000/blog/get/${params?.id}`,
+          `https://blog-backend-flame.vercel.app/blog/get/${params?.id}`,
           {
             method: "GET",
             headers: {
@@ -39,7 +39,7 @@ const EditBlog = () => {
   const handleEdit = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4000/blog/edit/${params?.id}`,
+        `https://https://blog-backend-flame.vercel.app/blog/edit/${params?.id}`,
         {
           method: "PUT",
           headers: {
