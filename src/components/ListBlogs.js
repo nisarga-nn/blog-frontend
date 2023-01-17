@@ -8,13 +8,16 @@ const ListBlogs = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("https://blog-backend-flame.vercel.app/blog/all", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            token: localStorage.getItem("token"),
-          },
-        });
+        const response = await fetch(
+          "https://blog-backend-flame.vercel.app/blog/all",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              token: localStorage.getItem("token"),
+            },
+          }
+        );
         const json = await response.json();
         setBlogs(json.blogs);
       } catch (err) {
@@ -25,13 +28,16 @@ const ListBlogs = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://blog-backend-flame.vercel.app/blog/delete/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          token: localStorage.getItem("token"),
-        },
-      });
+      const response = await fetch(
+        `https://blog-backend-flame.vercel.app/blog/delete/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            token: localStorage.getItem("token"),
+          },
+        }
+      );
       const json = await response.json();
       const filteredData = blogs?.filter((item) => item._id !== id);
       setBlogs(filteredData);
@@ -48,27 +54,27 @@ const ListBlogs = () => {
 
   return (
     <PrivateRoute>
+      <div className="list-container">
         <h1 className="heading">List Blogs</h1>
-      <div className="body">
-      <div className="container">
-        <div>
+        <div className="grid-container">
           {blogs?.map((item, index) => (
-            <div key={index}>
-              <Link className="blog" to="/">
+            <div className="blog" key={index}>
+              <Link className="blog-link" to="/">
                 <h1>{item?.title}</h1>
                 <p>{item?.content}</p>
                 <h3>~{item?.author}</h3>
               </Link>
               <div className="btn-grp">
-              <Link to={`/edit/${item?._id}`}>
-                <button className="btn">Edit</button>
-              </Link>
-              <button className="btn" onClick={() => handleDelete(item?._id)}>Delete</button>
-            </div>
+                <Link to={`/edit/${item?._id}`}>
+                  <button className="btn">Edit</button>
+                </Link>
+                <button className="btn" onClick={() => handleDelete(item?._id)}>
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
         </div>
-      </div>
       </div>
     </PrivateRoute>
   );

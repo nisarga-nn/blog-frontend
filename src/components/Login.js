@@ -61,10 +61,10 @@ const Login = () => {
     <div className="body">
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <h1>Log In</h1>
+        <h1>Welcome Back!<br/>Log In</h1>
         <div className="form">
         <label>Email:</label><br/>
-        <input className="input" type="email" name="email" onChange={handleChange} /><br/>
+        <input placeholder="Enter your Email" className="input" type="email" name="email" onChange={handleChange} /><br/>
         <label>Password:</label><br/>
         <input className="input" type="password" name="password" onChange={handleChange} /><br/>
         </div>
