@@ -6,13 +6,21 @@ const Navbar = () => {
   const context = useContext(AuthContext);
   return (
     context?.isUserLoggedIn && (
-      <nav>
-        <Link to="/">
-          <img src="favicon.ico" />
-          blogInc
+      <nav className="navbar">
+        <Link className="nav-link" to="/">
+          <img alt="logo" src="favicon.ico" width="30px" height="30px" />
         </Link>
-        <Link to="/add">Add Blog</Link>
-        <Link to="/login" onClick={context?.handleLogout}>
+        <Link className="nav-link" to="/">
+          blogsInc.
+        </Link>
+        <Link className="nav-link" to="/add">
+          Add Blog
+        </Link>
+        <Link
+          className="nav-link logout"
+          to="/login"
+          onClick={context?.handleLogout}
+        >
           Log Out
         </Link>
       </nav>

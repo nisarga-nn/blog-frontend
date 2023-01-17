@@ -54,6 +54,8 @@ const Signup = () => {
   };
 
   return (
+    <div className="body">
+
     <div className="container">
       <form onSubmit={handleSubmit}>
         <h1>Create New<br/> Account</h1>
@@ -93,6 +95,8 @@ const Signup = () => {
         </p>
       </form>
     </div>
+    </div>
+
   );
 };
 

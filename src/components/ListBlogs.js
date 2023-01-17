@@ -48,23 +48,27 @@ const ListBlogs = () => {
 
   return (
     <PrivateRoute>
-      <div>
-        <h1>List Blogs</h1>
+        <h1 className="heading">List Blogs</h1>
+      <div className="body">
+      <div className="container">
         <div>
           {blogs?.map((item, index) => (
             <div key={index}>
-              <Link to="/">
+              <Link className="blog" to="/">
                 <h1>{item?.title}</h1>
                 <p>{item?.content}</p>
                 <h3>~{item?.author}</h3>
               </Link>
+              <div className="btn-grp">
               <Link to={`/edit/${item?._id}`}>
-                <button>Edit</button>
+                <button className="btn">Edit</button>
               </Link>
-              <button onClick={() => handleDelete(item?._id)}>Delete</button>
+              <button className="btn" onClick={() => handleDelete(item?._id)}>Delete</button>
+            </div>
             </div>
           ))}
         </div>
+      </div>
       </div>
     </PrivateRoute>
   );

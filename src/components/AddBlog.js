@@ -46,31 +46,35 @@ const AddBlog = () => {
   };
   return (
     <PrivateRoute>
-      <div>
-        <h1>Add Blog</h1>
+      <div className="body">
+      <div className="container">
         <form onSubmit={handleSubmit}>
-          <label>Title:</label>
-          <input
+        <h1>Add Blog</h1>
+        <div className="form">
+          <label>Title:</label><br/>
+          <input className="input"
             type="text"
             onChange={handleChange}
             name="title"
             placeholder="eg:Nature Blog"
-          />
-          <label>Content:</label>
-          <textarea
+          /><br/>
+          <label>Content:</label><br/>
+          <textarea className="input"
             name="content"
             placeholder="Write Blog here..."
             onChange={handleChange}
-          />
-          <label>Author:</label>
-          <input
+          /><br/>
+          <label>Author:</label><br/>
+          <input className="input"
             name="author"
             type="text"
             onChange={handleChange}
             placeholder="eg:Glenn Quagmire"
-          />
-          <button>Add Blog</button>
+          /><br/>
+          </div>
+          <button className="btn">Add Blog</button>
         </form>
+      </div>
       </div>
     </PrivateRoute>
   );

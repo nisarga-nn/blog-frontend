@@ -80,34 +80,38 @@ const EditBlog = () => {
 
   return (
     <PrivateRoute>
-      <div>
-        <h1>Edit Blog</h1>
+      <div className="body">
+      <div className="container">
         <form onSubmit={handleSubmit}>
-          <label>Title:</label>
-          <input
+        <h1>Edit Blog</h1>
+        <div className="form">
+          <label>Title:</label><br/>
+          <input className="input"
             type="text"
             placeholder="eg:Birds"
             name="title"
             onChange={handleChange}
             value={blog?.title}
-          />
-          <label>Content:</label>
-          <textarea
+          /><br/>
+          <label>Content:</label><br/>
+          <textarea className="input"
             placeholder="Edited Blog Content..."
             name="content"
             onChange={handleChange}
             value={blog?.content}
-          />
-          <label>Author:</label>
-          <input
+          /><br/>
+          <label>Author:</label><br/>
+          <input className="input"
             type="text"
             placeholder="eg:Glenn Quagmire"
             name="author"
             onChange={handleChange}
             value={blog?.author}
-          />
-          <button>Edit Blog</button>
+          /><br/>
+          </div>
+          <button className="btn">Edit Blog</button>
         </form>
+      </div>
       </div>
     </PrivateRoute>
   );
