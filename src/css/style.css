@@ -15,7 +15,7 @@ body {
 .container {
   padding: 16px;
   background-color: white;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   text-align: center;
   color: #9584ff;

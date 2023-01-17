@@ -79,7 +79,7 @@ const Signup = () => {
         <label>Password:</label>
         <br />
         <input className="input" type="password" onChange={handleChange} name="password" />
-        <br /> <label>Conform Password</label>
+        <br /> <label>Confirm Password:</label>
         <br />
         <input className="input" type="password" onChange={handleChange} name="confirmpassword" />
         <br />
