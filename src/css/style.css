@@ -110,6 +110,7 @@ a {
 .blog {
   margin: 10px;
   background-color: white;
+  width:25%;
   border-radius: 20px;
   padding: 16px;
 }
