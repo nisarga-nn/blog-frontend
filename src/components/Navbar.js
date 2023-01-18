@@ -8,10 +8,7 @@ const Navbar = () => {
     context?.isUserLoggedIn && (
       <nav className="navbar">
         <Link className="nav-link" to="/">
-          <img alt="logo" src="favicon.ico" width="30px" height="30px" />
-        </Link>
-        <Link className="nav-link" to="/">
-          blogsInc.
+          BlogsInc.
         </Link>
         <Link className="nav-link" to="/add">
           Add Blog
