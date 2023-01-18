@@ -110,9 +110,9 @@ a {
 .blog {
   margin: 10px;
   background-color: white;
-  width:25%;
   border-radius: 20px;
   padding: 16px;
+  width: 300px;
 }
 
 .blog-link {
@@ -123,4 +123,9 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.para{
+  overflow: scroll;
+  height: 80px;
 }

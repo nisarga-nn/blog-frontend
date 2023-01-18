@@ -61,7 +61,7 @@ const ListBlogs = () => {
             <div className="blog" key={index}>
               <Link className="blog-link" to="/">
                 <h1>{item?.title}</h1>
-                <p>{item?.content}</p>
+                <p className="para">{item?.content}</p>
                 <h3>~{item?.author}</h3>
               </Link>
               <div className="btn-grp">
